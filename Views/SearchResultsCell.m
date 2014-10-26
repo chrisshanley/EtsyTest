@@ -96,6 +96,10 @@
 
 -(void)render
 {
+    /*
+     ideally we'd save the images to the .tmp directory to handle caching for these images. 
+     nomally in the format <listing-ID>-<user-id/guest>.jpg to help with performance and to not waist band width
+     */
     self.label.text = [self.results.listingTitle componentsSeparatedByString:@"-"][0];
     
     NSURLRequest * req = [NSURLRequest requestWithURL:self.results.listingBitmapURL];

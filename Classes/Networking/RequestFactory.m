@@ -123,6 +123,7 @@
     for( NSString *key in params)
     {
         value = params[key];
+        //likely there is a better way to encode a URL safe string but this works for a basic character set
         pair  = [NSString stringWithFormat:@"%@=%@", key, [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
         [values addObject:pair];
     }

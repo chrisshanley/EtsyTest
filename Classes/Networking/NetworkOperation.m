@@ -127,7 +127,10 @@ typedef void (^ServiceCompleteHandler) (NSData *data, NSURLResponse *response, N
 -(void)handleErrorOrNil:(NSError *)error responseOrNil:(NSHTTPURLResponse *)httpresponse
 {
     
-    // TO DO : better error management
+    // TO DO : better error management ideally this class will be assess the content of the json as well as
+    // NSHTTPURLResponse object to determine if this was a successfull request. Its often in ( oauth ) you can get
+    // a 200 response code with an error message of "invalid user name" , this is to help with those custom cases
+    
   //  NSAssert( (error && httpresponse), @"<SSNetworkOperation:> A valild cocoa error or an HTTP Response ( NSURLHTTPResponse  ) is required to create an error object");
     _error = [[NetworkError alloc]initWithResponseObject:httpresponse andErrorOrNil:error];
 }

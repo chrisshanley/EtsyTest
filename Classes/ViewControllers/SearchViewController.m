@@ -112,7 +112,7 @@
 -(void)showErrorMessage
 {
     /*
-     error message would be localized strings in an production environment 
+     error message would be localized strings in an production environment
      */
     UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"whoops" message:@"we are having API issues, sorry" delegate:nil cancelButtonTitle:@"bummer" otherButtonTitles:nil];
     [av show];
