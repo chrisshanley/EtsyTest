@@ -35,9 +35,11 @@
  */
 -(void)handleResultsLoaded:(NSArray *)newItems
 {
+    NSLog(@"%@ -- page loaded", self);
+   
     __block NSIndexPath  *path;
-    __block NSInteger  index = self.searchResults.count;
-    NSMutableArray   *paths = [NSMutableArray array];
+    __block NSInteger     index = self.searchResults.count;
+    NSMutableArray       *paths = [NSMutableArray array];
     
     [newItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         path = [NSIndexPath indexPathForRow:idx inSection:0];

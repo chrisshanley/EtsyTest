@@ -26,9 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+    layout.itemSize = CGSizeMake(320, 240);
 }
-
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
